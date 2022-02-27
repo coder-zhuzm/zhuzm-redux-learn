@@ -1,14 +1,15 @@
-import "./styles.css";
-import Redux from "./reduxHooks";
-import { Provider } from "react-redux";
-import store from "./store";
+import React from "react";
+
+import Home from "./page3/home";
+import About from "./page3/about";
+import './app.css'
 
 export default function App() {
   return (
-    <div className="App">
-      <Provider store={store}>
-        <Redux />
-      </Provider>
+    <div className="app">
+      <Home />
+      <hr/>
+      <About />
     </div>
   );
 }
