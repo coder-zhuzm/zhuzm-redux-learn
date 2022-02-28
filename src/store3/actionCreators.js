@@ -5,7 +5,6 @@ import {
   DECREMENT,
   CHANGE_BANNERS,
   CHANGE_RECOMMEND,
-  FETCH_HOME_MULTIDATA,
 } from "./constants.js";
 
 export const addAction = (num) => ({

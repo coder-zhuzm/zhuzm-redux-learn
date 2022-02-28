@@ -2,8 +2,8 @@ import React, { PureComponent } from 'react'
 import {
     incAction,
     addAction,
-    getHomeMultidataAction,
-} from '../store4/actionCreators'
+    fetchHomeMultidataAction,
+} from '../store5/actionCreators'
 
 import { connect } from 'react-redux'
 
@@ -49,7 +49,7 @@ const mapDispatchToProps = (dispatch) => ({
         dispatch(addAction(number))
     },
     getHomeMultidata() {
-        dispatch(getHomeMultidataAction)
+        dispatch(fetchHomeMultidataAction)
     },
 })
 export default connect(mapStateToProps, mapDispatchToProps)(Home)

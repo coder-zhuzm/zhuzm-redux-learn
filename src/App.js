@@ -1,7 +1,7 @@
 import React from "react";
 
-import Home from "./page3/home";
-import About from "./page3/about";
+import Home from "./page5/home";
+import About from "./page5/about";
 import './app.css'
 
 export default function App() {

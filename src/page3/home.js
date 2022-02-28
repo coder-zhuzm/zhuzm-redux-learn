@@ -13,7 +13,7 @@ import axios from "axios";
 class Home extends PureComponent {
   componentDidMount() {
     axios({
-      url: "http://123.207.32.32:8000/home/multidata",
+      url: "https://api.zhuzm.icu/coderwhy",
     }).then((res) => {
       const { banner, recommend } = res.data.data;
       this.props.changeBanners(banner?.list);

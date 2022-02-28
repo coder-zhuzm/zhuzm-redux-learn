@@ -1,3 +1,4 @@
+import axios from "axios";
 import {
   ADD_NUMBER,
   SUB_NUMBER,
@@ -9,11 +10,11 @@ import {
 
 export const addAction = (num) => ({
   type: ADD_NUMBER,
-  num
+  num,
 });
 export const subAction = (num) => ({
   type: SUB_NUMBER,
-  num
+  num,
 });
 export const incAction = () => ({
   type: INCREMENT,
@@ -25,10 +26,21 @@ export const decAction = () => ({
 // 轮播图和推荐的action
 export const changeBannersAction = (banners) => ({
   type: CHANGE_BANNERS,
-  banners
+  banners,
 });
 
 export const changeRecommendAction = (recommends) => ({
   type: CHANGE_RECOMMEND,
-  recommends
+  recommends,
 });
+
+// redux-thunk 的action
+export const getHomeMultidataAction = (dispatch, getState) => {
+  axios({
+    url: "https://api.zhuzm.icu/data.json",
+  }).then((res) => {
+    const { banner, recommend } = res.data.data;
+    dispatch(changeBannersAction(banner?.list));
+    dispatch(changeRecommendAction(recommend?.list));
+  });
+};

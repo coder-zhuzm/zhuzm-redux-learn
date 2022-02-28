@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { subAction, decAction } from "../store4/actionCreators";
+import { subAction, decAction } from "../store5/actionCreators";
 import { connect } from "react-redux";
 
 class About extends PureComponent {

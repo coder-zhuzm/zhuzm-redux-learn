@@ -1,24 +1,3 @@
-## Redux - 调用 react-redux 中提供的 connect
+## redux-thunk 的使用 及 redux-dev-tools 的使用
 
-- 调用 `react-redux` 中提供的 `connect`
-- 使用 `react-redux` 中的 `Provider` 进行`store`数据传递
-
-## index 入口文件
-
-```js
-import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-
-import App from "./App";
-import store from "./store2";
-
-const rootElement = document.getElementById("root");
-
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  rootElement
-);
-```
+小demo
